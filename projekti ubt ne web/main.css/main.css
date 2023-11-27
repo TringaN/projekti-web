@@ -1,0 +1,167 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration:none;
+    list-style: none;
+    scroll-behavior:smooth;
+}
+:root{
+    --bg-color:var(--text-color);
+    --second-bg-color:#fff;
+    --text-color:#fff;
+    --second-color:#ccc;
+    --main-color:#1aef18;
+    --big-font: 5rem;
+    --h2-font:3rem;
+    --p-font:1.1rem;
+}
+body{
+    background:var(--bg-color);
+    color: var(--text-color);
+}
+header{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: transparent;
+    padding: 22px 15%;
+    border-bottom:1px solid transparent ;
+    transition: all .45s ease;
+    color: #fff;
+}
+.logo{
+    color: var(--text-color);
+    font-size: 35px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+span{
+    color: var(--main-color);
+}
+.navlist{
+    display: flex;
+}
+.navlist a{
+    color: var(--second-color);
+    font-size: 17px;
+    font-weight: 500;
+    margin: 0 25px;
+    transition: all .45s ease;
+}
+.navlist a:hover{
+    color: var(--main-color);
+}
+.navlist a.active{
+  color: var(--main-color);
+}
+#menu-icon{
+    font-size: 35px;
+    color: var(--text-color);
+    z-index: 10001;
+    cursor: pointer;
+    margin-left: 25px;
+    display: none;
+}
+section{
+    padding: 160px 15% 120px;
+}
+.home{
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background-image: url(https://uploads-ssl.webflow.com/609a8d5ba5fe8ac598ef0bea/617715ef408108101caba5d1_truesports-hoco-1054-1024x675.jpg);
+     background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.button{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+.btn{
+    display: inline-block;
+    padding: 12px 28px;
+    background: var(--main-color);
+    border-radius: 5px;
+    color: var(--text-color);
+    font-size: 1rem;
+    letter-spacing: 1px;
+    font-weight: 600;
+    transition:  all .45s ease;
+}
+.btn:hover{
+    transform: scale(0.9);
+}
+.btn2{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--text-color);
+    margin-left: 35px;
+}
+.btn2 span i{
+    height: 55px;
+    width: 55px;
+    background: var(--main-color);
+    color: var(--text-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 35px;
+    border-radius: 50%;
+    margin-right: 15px;
+    transition: all .45s ease;
+}
+.btn2 span i:hover{
+    transform: scale(1.1) translate(5px);
+}
+.info{
+    height: 300px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.desc{
+    width: 100%;
+    padding: 20px 0px;
+    border: solid;
+    list-style-type: circle;
+}
+.desc h1{
+    font-size: 50px;
+    color: black;
+    font-weight: 200px;
+    text-decoration: underline;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+ .desc ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+ }
+ .desc ul li{
+    font-family: arial;
+    margin-right: 70px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.5s;
+    list-style-type: square;
+    font-size: 40px;
+    color: #ffe45c;
+ }
