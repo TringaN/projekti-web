@@ -11,7 +11,7 @@
     --bg-color:var(--text-color);
     --second-bg-color:#fff;
     --text-color:#fff;
-    --second-color:#ccc;
+    --second-color:#fff;
     --main-color:#1aef18;
     --big-font: 5rem;
     --h2-font:3rem;
@@ -22,22 +22,23 @@ body{
     color: var(--text-color);
 }
 header{
-    position: fixed;
+    background-color: #fff;  
+     /* position: fixed;  */
     width: 100%;
-    top: 0;
+    height: 80px; 
     right: 0;
-    z-index: 1000;
+    z-index: 1000; 
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: transparent;
+    background: #fff;
     padding: 22px 15%;
-    border-bottom:1px solid transparent ;
+     border-bottom:1px solid transparent ; 
     transition: all .45s ease;
     color: #fff;
 }
 .logo{
-    color: var(--text-color);
+    color: black;
     font-size: 35px;
     font-weight: 700;
     letter-spacing: 1px;
@@ -47,53 +48,193 @@ span{
 }
 .navlist{
     display: flex;
+    font-family:'Times New Roman', Times, serif ;
 }
 .navlist a{
-    color: var(--second-color);
-    font-size: 17px;
+    color: black;
+    font-size: 25px;
     font-weight: 500;
     margin: 0 25px;
-    transition: all .45s ease;
+    transition:all .45s ease; 
+   
 }
 .navlist a:hover{
     color: var(--main-color);
 }
 .navlist a.active{
   color: var(--main-color);
-}
+} 
 #menu-icon{
     font-size: 35px;
-    color: var(--text-color);
+    color: var(--main-color);
     z-index: 10001;
     cursor: pointer;
     margin-left: 25px;
     display: none;
 }
-section{
-    padding: 160px 15% 120px;
-}
+/* section{
+    padding: 160px 15% 100px;
+}   */
 .home{
-    position: relative;
-    height: 100vh;
+    /* height: 100px; */
     width: 100%;
     background-image: url(https://uploads-ssl.webflow.com/609a8d5ba5fe8ac598ef0bea/617715ef408108101caba5d1_truesports-hoco-1054-1024x675.jpg);
-     background-size: cover;
-    background-position: center;
+    background-size: cover;
     display: flex;
-    align-items: center;
-    justify-content: flex-start;
+     align-items: center; 
+    justify-content: flex-end;
+    height: calc(100vh - 50px)
+
 }
-.button{
-    display: inline-flex;
+
+.container {
+    display: flex;
+    flex-direction: row;
+    align-items:stretch;
+    justify-content:flex-start;
+     padding: 0px 0px 0px 0px;  
+}
+#Wallpaper {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 50%;
+    height: 280px;
+   
+}
+.login-form {
+    width: 50%;
+    background-color: #E1EAEA;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+h2 {
+    text-align: center;
+    color: #333;
+}
+
+.form-row {
+    margin-bottom: 10px;
+}
+
+.half-width {
+    width: 48%; 
+    display: inline-block;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #1aef18;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+} 
+
+button:hover {
+    background-color: #77cc77; 
+} 
+.Process{
+    font-size: 20px;
+    color: #fff;
+    background-color: #1aef18;
+    border: #3232CD solid 3px;
+}
+.Process h1{
+    display: flex;
+    justify-content: center;
+    font-size: 100px;
+    font-style: italic;
+    text-decoration: underline;
+}
+.Services  .box{
+    width: 30%;
+    height: 500px;
+    background-color: #fff;
+}
+.box img{
+    width: 100%;
+    height: 300px;
+}
+.Services{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;  
+}
+.box h3{
+    text-decoration: underline;
+}
+.box h3,p,a{
+     padding: 0px 10px; 
+    color: #3b3b3b;
+}
+.box a{
+    color: #3b3b3b;
+    text-decoration: none;
+    font-size: 17px;
+}
+.testimonials{
+    width: 100%;
+    height: 500px;
+     background-color: black; 
+     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;  
+     border: solid 5px gold; 
+} 
+.comment{
+    color: #fff;
+    font-size: 50px;
+    font-style: italic;
+    width: 40%;
+}
+.end{
+    background-color:#3232CD;
+    width: 100%;
+    height: 200px;
+    flex-direction: row;
+    border: solid 2px black;
+}
+.end h1{
+    color: #fff;
+     display: flex;
+    justify-content: center;
+    align-items: center; 
+    font-size: 70px;
+    font-style: italic;
+    font-weight: bold;
+}
+ .end p{
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    color: #1aef18;
+    
+} 
+.buttons{
+    display: flex;
     align-items: center;
     justify-content: center;
 }
-.btn{
-    display: inline-block;
+.btn2{
+    /* display: inline-block; */
     padding: 12px 28px;
-    background: var(--main-color);
+    background: black;
     border-radius: 5px;
-    color: var(--text-color);
+    color: #1aef18;
     font-size: 1rem;
     letter-spacing: 1px;
     font-weight: 600;
@@ -102,66 +243,181 @@ section{
 .btn:hover{
     transform: scale(0.9);
 }
-.btn2{
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 15px;
-    font-weight: 600;
-    color: var(--text-color);
-    margin-left: 35px;
-}
-.btn2 span i{
-    height: 55px;
-    width: 55px;
-    background: var(--main-color);
-    color: var(--text-color);
+.lifestyle{
+    width: 100%;
+    background-image: url(https://img.freepik.com/premium-photo/diet-plan-menu-program-tape-measure-water-dumbbells-diet-food-fresh-fruits-white_1429-5171.jpg);
+    background-size: cover;
+    display: flex;
+     align-items: center; 
+    justify-content: flex-end;
+    height: 600px;
+} 
+.text h1{
     display: flex;
     align-items: center;
-    justify-content: center;
-    font-size: 35px;
-    border-radius: 50%;
-    margin-right: 15px;
-    transition: all .45s ease;
+    font-weight: bold;
+    font-size: 80px;
+    color: #FF9907;
+    margin-bottom: 80px;
+    margin-left: 90px;
 }
-.btn2 span i:hover{
-    transform: scale(1.1) translate(5px);
+.text p{
+    font-weight: bold;
+    color: black;
 }
-.info{
-    height: 300px;
+.footerall{
+    height: 350px;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
 }
-.desc{
-    width: 100%;
-    padding: 20px 0px;
-    border: solid;
-    list-style-type: circle;
+.footer-menu{
+    width: 65%;
+    height: 100%;
+    background-color: #3b3b3b;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
 }
-.desc h1{
-    font-size: 50px;
+.map{
+    width: 35%;
+    height: 100%;
+    background-image: url('https://media.istockphoto.com/vectors/city-map-navigation-vector-id1178581754?k=20&m=1178581754&s=612x612&w=0&h=SkTDSyHeN2EqI9hm7Bptz-YfzBsNy_j184Rh9moEK6g=');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.box-2{
+    width: 30%;
+    height: 90%;
+}
+.lista{
+    display: flex;
+    flex-direction: column;
+}
+.lista li{
+    color: #fff;
+    font-size: 17px;
+    line-height: 29px;
+    list-style: none;
+    padding-left: 38px;
+}
+.box-2 h3{
+    padding-left: 38px;
     color: black;
-    font-weight: 200px;
-    text-decoration: underline;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
+    font-size: 25px;
 }
- .desc ul{
+footer{
+    background-color: #111;
+}
+.footerContainer{
+    width: 100%;
+    padding: 70px 30px 20px;
+}
+.socialIcons{
     display: flex;
     justify-content: center;
-    align-items: center;
-    margin-top: 50px;
- }
- .desc ul li{
-    font-family: arial;
-    margin-right: 70px;
-    font-weight: bold;
-    cursor: pointer;
+}
+.socialIcons a{
+    text-decoration: none;
+    padding: 10px;
+    background-color: #fff;
+    margin: 10px;
+    border-radius: 50%;
+}
+.socialIcons a i{
+    font-size: 2em;
+    color: #111;
+    opacity: 0.9;
+}
+.socialIcons a:hover{
+    background-color: #111;
     transition: 0.5s;
-    list-style-type: square;
-    font-size: 40px;
-    color: #ffe45c;
- }
+}
+.socialIcons a:hover i{
+    color: #fff;
+    transition: 0.5s;
+}
+.footerNav{
+    margin: 30px 0;
+}
+.footerNav ul{
+    display: flex;
+    justify-content: center;
+   list-style-type: none;
+}
+.footerNav ul li a{
+    color: #fff;
+    margin: 20px;
+    text-decoration: none;
+    font-size: 1.3em;
+    opacity: 0.7;
+    transition: 0.5s;
+}
+.footerNav ul li a:hover{
+    opacity: 1;
+}
+.footerBottom{
+    background-color: #000;
+    padding: 20px;
+    text-align: center;
+}
+.designer{
+    opacity: 0.7;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 400;
+    margin: 0px 5px;
+}
+@media only screen and (max-width: 768px) {
+    header {
+        padding: 22px 10%;
+    }
+
+    .navlist a {
+        font-size: 16px;
+        margin: 0 10px;
+        .home {
+            height: calc(100vh - 80px);
+        }
+
+        .container {
+            flex-direction: column; 
+        }
+        
+        #Wallpaper {
+            width: 100%; 
+        }
+        
+        .login-form {
+            width: 100%; 
+        }
+             .Services {
+            flex-direction: column; 
+        }
+        
+        .box {
+            width: 100%; 
+            height: auto; 
+        }
+        .testimonials {
+            height: auto; 
+        }
+        
+        .comment {
+            width: 80%; 
+        }
+        .lifestyle {
+            height: 400px; 
+        }
+        
+        .text h1 {
+            font-size: 40px;
+            margin-bottom: 40px; 
+        }
+        
+        .text p {
+            font-size: 16px; 
+        }
+    }
+}
