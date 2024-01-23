@@ -1,114 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;500;600&display=swap');
 *{
-    margin: 0px;
-    padding: 0px;
-    font-family: poppins;
-    box-sizing: border-box;
-}
-a{
-    text-decoration: none;
-}
-ul{
-    list-style: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins' , 'sans-serif';
 }
 body{
-    margin: 0px;
-    padding: 0px;
-    font-family: poppins;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #efefef;
 }
-#blog{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding: 40px;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+.slide-container{
+  max-width: 1120px;
+  width: 100%;
+  padding: 40px 0 ;
 }
-.blog-heading{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+.slide-content{
+  margin: 0 40px;
+  overflow: hidden;
+  border-radius: 25px;
 }
-.blog-heading span{
-    color: #f33c3c;
+.card{
+  width: 320px;
+  border-radius: 25px;
+  background-color: #fff;
 }
-.blog-heading h3{
-    font-size: 2.4rem;
-    color:#2b2b2b;
+.image-content,
+.card-content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 14px;
 }
-.blog-container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 20px 0px;
-    flex-wrap: wrap;
+.image-content{
+  row-gap: 5px;
+  position: relative;
+  padding: 25px 0;
 }
-.blog-box{
-    width: 350px;
-    background-color: #fff;
-    border: 1px solid #ececec;
-    margin: 20px;
+.overlay{
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #4070f4;
+  border-radius: 25px 25px 0 25px;
 }
-.blog-img{
-    width: 100%;
-    height: auto;
+.overlay::before,
+.overlay::after{
+  content: '';
+  position: absolute;
+  right: 0;
+  bottom: -40px;
+  height: 40px;
+  width: 40px;
+  background-color: #4070f4;
 }
-.blog-img img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
+.overlay::after{
+  border-radius: 0 25px 0 0;
+  background-color: #fff;
+
 }
-.blog-text{
-    padding: 30px;
-    display: flex;
-    flex-direction: column;
+.card-image{
+  position: relative;
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  background: #fff;
+  padding: 3px;
+
 }
-.blog-text span{
-    color: #f33c3c;
-    font-size: 0.9rem;
+.card-image .card-img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #4070f4;
+
 }
-.blog-text .blog-tittle{
-    font-size: 1.3rem;
-    font-weight: 500;
-    color: #272727;
+.name{
+  font-size: 18px;
+  font-weight: 500;
+  color: #333;
 }
-.blog-text .blog-tittle:hover{
-    color: #f33c3c;
+.description{
+  font-size: 14px;
+  color: #707070;
+  text-align: center;
+
 }
-.blog-text p{
-    color: #9b9b9b;
-    font-size: 0.9rem;
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    margin: 20px 0px;
+.button{
+  border: none;
+  font-size: 16px;
+  color: #fff;
+  padding: 8px 16px ;
+  background-color: #4070f4;
+  border-radius: 6px;
+  margin: 14px;
+  cursor: pointer;
+  transition:all 0.3s ease ;
 }
-.blog-text a{
-    color: #0f0f0f;
+.button:hover{
+background: #265DF2;
+transition: color 0.3s ease;
+} 
+.swiper-natBtn:hover{
+  color: #4070f4;
 }
-.blog-text a:hover{
-    color: #f33c3c;
-    transition: all ease  0.3s;
+.swiper-natBtn::before,
+.swiper-natBtn::after{
+  font-size: 40px;
 }
-@media (max-width:1250px) {
-    .blog-box{
-        width: 300px;
-    }
+.swiper-button-next{
+  right: 0;
 }
-@media(max-width:1100px){
-    .blog-box{
-        width: 70%;
-    } 
+.swiper-button-prev{
+  left: 0;
 }
-@media(max-width:550px){
-    .blog-box{
-        margin: 20px 10px;
-        width: 100%;
-    }
-    #blog{
-        padding: 20px;
-    }
+.swiper-pagination-bullet{
+  background-color: #6e93f7;
+  opacity: 1;
+}
+.swiper-pagination-bullet-active{
+  background-color: #4070f4;
+}
+@media screen and(max-width:768px){
+  .slide-content{
+    margin: 0 10px;
+  }
+  .swiper-navBtn{
+    display: none;
+  }
 }
