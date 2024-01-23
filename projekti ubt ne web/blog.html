@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+    <!-- <link rel="stylesheet" href="service.css"> -->
+    <link rel="stylesheet" href="index.html">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"> -->
+    <link rel="stylesheet" href="/service.css">
+    <link rel="stylesheet" href="/main.css/swiper-bundle.min.css">
+</head>
+<body>
+   <div class="slide-container swiper">
+      <div class="slide-content">
+         <div class="card-wrapper swiper-wrapper">
+            <div class="card swiper-slide">
+               <div class="image-content">
+                  <span class="overlay"></span>
+                  <div class="card-image">
+                     <img src="https://t4.ftcdn.net/jpg/01/22/69/41/360_F_122694157_jjUIXTkpCHa3usyTZx4RCWDIjQqKsqzS.jpg" alt="" class="card-img">
+                  </div>
+               </div>
+               <div class="card-content">
+                  <h2 class="name">David Dell </h2>
+                  <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, ratione.</p>
+                  <button class="button">View More</button>
+               </div>
+            </div>
+
+            <!-- 2 -->
+            <div class="card swiper-slide">
+               <div class="image-content">
+                  <span class="overlay"></span>
+                  <div class="card-image">
+                     <img src="https://t4.ftcdn.net/jpg/01/22/69/41/360_F_122694157_jjUIXTkpCHa3usyTZx4RCWDIjQqKsqzS.jpg" alt="" class="card-img">
+                  </div>
+               </div>
+               <div class="card-content">
+                  <h2 class="name">David Dell </h2>
+                  <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, ratione.</p>
+                  <button class="button">View More</button>
+               </div>
+            </div>
+            <!-- 3 -->
+            <div class="card swiper-slide">
+               <div class="image-content">
+                  <span class="overlay"></span>
+                  <div class="card-image">
+                     <img src="https://t4.ftcdn.net/jpg/01/22/69/41/360_F_122694157_jjUIXTkpCHa3usyTZx4RCWDIjQqKsqzS.jpg" alt="" class="card-img">
+                  </div>
+               </div>
+               <div class="card-content">
+                  <h2 class="name">David Dell </h2>
+                  <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, ratione.</p>
+                  <button class="button">View More</button>
+               </div>
+            </div>
+            <!-- 4 -->
+            <div class="card swiper-slide">
+               <div class="image-content">
+                  <span class="overlay"></span>
+                  <div class="card-image">
+                     <img src="https://t4.ftcdn.net/jpg/01/22/69/41/360_F_122694157_jjUIXTkpCHa3usyTZx4RCWDIjQqKsqzS.jpg" alt="" class="card-img">
+                  </div>
+               </div>
+               <div class="card-content">
+                  <h2 class="name">David Dell </h2>
+                  <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, ratione.</p>
+                  <button class="button">View More</button>
+               </div>
+            </div>
+            <!-- 5 -->
+            <div class="card swiper-slide">
+               <div class="image-content">
+                  <span class="overlay"></span>
+                  <div class="card-image">
+                     <img src="https://t4.ftcdn.net/jpg/01/22/69/41/360_F_122694157_jjUIXTkpCHa3usyTZx4RCWDIjQqKsqzS.jpg" alt="" class="card-img">
+                  </div>
+               </div>
+               <div class="card-content">
+                  <h2 class="name">David Dell </h2>
+                  <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, ratione.</p>
+                  <button class="button">View More</button>
+               </div>
+            </div>
+            <!-- 6 -->
+            <div class="card swiper-slide">
+               <div class="image-content">
+                  <span class="overlay"></span>
+                  <div class="card-image">
+                     <img src="https://t4.ftcdn.net/jpg/01/22/69/41/360_F_122694157_jjUIXTkpCHa3usyTZx4RCWDIjQqKsqzS.jpg" alt="" class="card-img">
+                  </div>
+               </div>
+               <div class="card-content">
+                  <h2 class="name">David Dell </h2>
+                  <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, ratione.</p>
+                  <button class="button">View More</button>
+               </div>
+            </div>
+
+         </div>
+      </div>
+         <div class="swiper-button-next swiper-navBtn"></div>
+         <div class="swiper-button-prev swiper-natBtn"></div>
+         <div class="swiper-pagination"> </div>
+   </div>
+   <script src="/main.css/swiper-bundle.min.js"></script>
+   <script>
+      var swiper = new Swiper(".slide-content" ,{
+         slidesPerView: 3,
+         spaceBetween: 25,
+         loop:true,
+         centerSlide:'true',
+         fade:'true',
+         grabCursor:'true',
+         pagination:{
+            el:".swiper-pagination",
+            clickable:true,
+            dynamicBullets:true,
+         },
+         navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+         },
+         breakpoints:{
+            0:{
+               slidesPerView:1,
+            },
+            520:{
+               slidesPerView:2,
+            },
+            950:{
+               slidesPerView:3,
+            },
+         },
+      });
+   </script>
+</body>
+</html>
