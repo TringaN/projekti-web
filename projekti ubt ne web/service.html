@@ -3,55 +3,130 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="service.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="index.html">
-    <link rel="stylesheet" href="<link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+        body{
+            width: 100%;
+            background-color: #809faa;
+        }
+        .title h1{
+            text-align: center;
+            padding-top: 50px;
+            font-size: 42px;
+        }
+        .title h1::after{
+            content: "";
+            height: 4px;
+            width: 230px;
+            background-color: #000;
+            display: block;
+            margin: auto;
+        }
+        .services{
+            width: 85%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 75px auto;
+            text-align: center;
+        }
+        .card{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-direction: column;
+            margin: 0px 20px;
+            padding: 20px 20px;
+            background-color: #efefef;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        .card:hover{
+            background-color: #b8d4de;
+            transition: 0.4s ease;
+        }
+        .card .icon{
+            font-size: 35px;
+            margin-bottom: 10px;
+        }
+        .card h2{
+            font-size: 28px;
+            color: #c94f4f;
+            margin-bottom: 20px;
+        }
+        .card p{
+            font-size: 17px;
+            margin-bottom: 30px;
+            line-height: 1.5;
+            color: #5e5e5e;
+        }
+        .button{
+            font-size: 15px;
+            text-decoration: none;
+            color: #fff;
+            padding: 8px 12px;
+            border-radius: 5px;
+            letter-spacing: 1px;
+            background-color: #2c677c;
+        }
+        .button:hover{
+            background-color: #c94f4f;
+            transition: 0.4s ease;
+        }
+        @media screen and (max-width: 940px) {
+            .services{
+                display: flex;
+                flex-direction: column;
+            }
+            .card{
+                width: 85%;
+                display: flex;
+                margin: 20px 0px;
+            }
+        }
+    </style>
 </head>
 <body>
-    <section id="blog">
-        <div class="blog-heading">
-            <span>My Recent Posts </span>
-            <h3>My blog</h3>
+    <div class="section">
+        <div class="title">
+            <h1>Our Services</h1>
         </div>
+        <div class="services">
+           <div class="card">
+            <div class="icon">
+                <i class="fa-solid fa-person-running"></i>
+            </div>
+            <h2>Strength Training</h2>
+            <p>In this program , you are trained to improve your Strength through many exercises</p>
+            <a href="" class="button">Read More</a>
+           </div>
+           <div class="card">
+            <div class="icon">
+                <i class="fa-solid fa-fire"></i>
+            </div>
+            <h2>Fat Burning</h2>
+            <p>This program is suitable for you who wants to get rid of your fat and lose their weight</p>
+            <a href="" class="button">Read More</a>
+           </div>
+           <div class="card">
+            <div class="icon">
+                <i class="fa-solid fa-heart"></i>
+            </div>
+            <h2>Health Fitness</h2>
+            <p>This program is designed for those who exercises only for their body fitness not body building</p>
+            <a href="" class="button">Read More</a>
 
-        <div class="blog-container">
-            <div class="blog-box">
-                <div class="blog-img">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXoRxQkMkvIWjvhD8CzBVtX_l3LPupwE4AJ4ikeYNXxQ&s" alt="">
-                </div>
-                <div class="blog-text">
-                    <span>John Doe / Fitness Coach</span>
-                    <a href="#" class="blog-tittle">Who is he? </a>
-                    <p>I love to help others transform through fitness ! I love working with beginners and those who have failed in the past because i was once a beginner</p>
-                    <a href="#">Read More</a>
-                </div>
-            </div>
-            <div class="blog-box">
-                <div class="blog-img">
-                    <img src="https://www.shutterstock.com/image-photo/portrait-female-personal-trainer-holding-260nw-2249557387.jpg" alt="">
-                </div>
-                <div class="blog-text">
-                    <span>Maria Alice / Nutrition coach</span>
-                    <a href="#" class="blog-tittle">Why you need a  </a>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, aspernatur.</p>
-                    <a href="#">Read More</a>
-                </div>
-            </div>
-            <div class="blog-box">
-                <div class="blog-img">
-                    <img src="https://4.bp.blogspot.com/-7D1R7HYKUG4/VET7arZy-cI/AAAAAAAAFfo/RlYPmYH_h6s/s1600/Personal%2BTrainer%2B-%2BGym%2BFitness.jpg" alt="">
-                </div>
-                <div class="blog-text">
-                    <span>Nick Mitchell / Condicional Coach</span>
-                    <a href="#" class="blog-tittle">What has Happened of </a>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, aspernatur.</p>
-                    <a href="#">Read More</a>
-                </div>
-            </div>
+           </div>
         </div>
-    </section>
+    </div>
 </body>
 </html>
