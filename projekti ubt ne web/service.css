@@ -12,8 +12,14 @@ body{
   justify-content: center;
   background-color: #efefef;
 }
+section{
+  border: solid 1px black;
+}
+header{
+  margin-bottom: 100px;
+}
 .slide-container{
-  max-width: 1120px;
+ max-width: 1120px; 
   width: 100%;
   padding: 40px 0 ;
 }

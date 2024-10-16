@@ -5,25 +5,31 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Document</title>
     <!-- <link rel="stylesheet" href="service.css"> -->
-    <link rel="stylesheet" href="index.html">
+    <!-- <link rel="stylesheet" href="index.html"> -->
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"> -->
     <link rel="stylesheet" href="/service.css">
+
     <link rel="stylesheet" href="/main.css/swiper-bundle.min.css">
 </head>
 <body>
+   <header>
+      <h1>Meet the coach</h1>
+   </header>
+   <section>
    <div class="slide-container swiper">
       <div class="slide-content">
          <div class="card-wrapper swiper-wrapper">
+            
             <div class="card swiper-slide">
                <div class="image-content">
                   <span class="overlay"></span>
                   <div class="card-image">
-                     <img src="https://t4.ftcdn.net/jpg/01/22/69/41/360_F_122694157_jjUIXTkpCHa3usyTZx4RCWDIjQqKsqzS.jpg" alt="" class="card-img">
+                     <img src="<?php echo $trajneri['Foto'];?>" alt="" class="card-img">
                   </div>
                </div>
                <div class="card-content">
                   <h2 class="name">David Dell </h2>
-                  <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, ratione.</p>
+                  <p class="description">I love to help others transform through fitness ! I love working with beginners and those who have failed in the past because i was once a beginner</p>
                   <button class="button">View More</button>
                </div>
             </div>
@@ -33,12 +39,12 @@
                <div class="image-content">
                   <span class="overlay"></span>
                   <div class="card-image">
-                     <img src="https://t4.ftcdn.net/jpg/01/22/69/41/360_F_122694157_jjUIXTkpCHa3usyTZx4RCWDIjQqKsqzS.jpg" alt="" class="card-img">
+                     <img src="https://www.shutterstock.com/image-photo/female-gym-instructor-half-length-260nw-101551159.jpg" alt="" class="card-img">
                   </div>
                </div>
                <div class="card-content">
-                  <h2 class="name">David Dell </h2>
-                  <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, ratione.</p>
+                  <h2 class="name">Maria Alice </h2>
+                  <p class="description">Strength is born from the resilience of recovery. In the journey of ACL rehab, each step forward is a testament to your determination, and every setback is an opportunity for a stronger comeback.</p>
                   <button class="button">View More</button>
                </div>
             </div>
@@ -47,12 +53,12 @@
                <div class="image-content">
                   <span class="overlay"></span>
                   <div class="card-image">
-                     <img src="https://t4.ftcdn.net/jpg/01/22/69/41/360_F_122694157_jjUIXTkpCHa3usyTZx4RCWDIjQqKsqzS.jpg" alt="" class="card-img">
+                     <img src="https://www.julienutrition.com/wp-content/uploads/2023/02/Personal-Trainer-Strength-Conditioning-and-Fitness-Coach-JM-Nutrition.jpg" alt="" class="card-img">
                   </div>
                </div>
                <div class="card-content">
-                  <h2 class="name">David Dell </h2>
-                  <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, ratione.</p>
+                  <h2 class="name">Nick Mitchell </h2>
+                  <p class="description">Ready to transform your fitness journey into a success story? Let's collaborate and unleash the athlete within you!</p>
                   <button class="button">View More</button>
                </div>
             </div>
@@ -61,17 +67,17 @@
                <div class="image-content">
                   <span class="overlay"></span>
                   <div class="card-image">
-                     <img src="https://t4.ftcdn.net/jpg/01/22/69/41/360_F_122694157_jjUIXTkpCHa3usyTZx4RCWDIjQqKsqzS.jpg" alt="" class="card-img">
+                     <img src="https://images.squarespace-cdn.com/content/v1/5e682fcb02f49f1934c59c4c/5c0577b0-e53d-4834-a75c-b68a49e72c14/FIT+Lane+Cove+-+Meet+Your+Maker+%2B+PT+Campaign+-+January+%2722-39.jpg" alt="" class="card-img">
                   </div>
                </div>
                <div class="card-content">
-                  <h2 class="name">David Dell </h2>
-                  <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, ratione.</p>
+                  <h2 class="name">John Doe </h2>
+                  <p class="description">Transform your excuses into reasons, your dreams into plans, and your goals into accomplishments.</p>
                   <button class="button">View More</button>
                </div>
             </div>
             <!-- 5 -->
-            <div class="card swiper-slide">
+            <!-- <div class="card swiper-slide">
                <div class="image-content">
                   <span class="overlay"></span>
                   <div class="card-image">
@@ -83,9 +89,9 @@
                   <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, ratione.</p>
                   <button class="button">View More</button>
                </div>
-            </div>
+            </div> -->
             <!-- 6 -->
-            <div class="card swiper-slide">
+            <!-- <div class="card swiper-slide">
                <div class="image-content">
                   <span class="overlay"></span>
                   <div class="card-image">
@@ -97,7 +103,7 @@
                   <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, ratione.</p>
                   <button class="button">View More</button>
                </div>
-            </div>
+            </div> -->
 
          </div>
       </div>
@@ -105,6 +111,7 @@
          <div class="swiper-button-prev swiper-natBtn"></div>
          <div class="swiper-pagination"> </div>
    </div>
+</section>
    <script src="/main.css/swiper-bundle.min.js"></script>
    <script>
       var swiper = new Swiper(".slide-content" ,{

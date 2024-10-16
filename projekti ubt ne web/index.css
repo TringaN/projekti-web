@@ -66,6 +66,7 @@ button{
     border-radius: 5px;
     padding: 10px 15px;
     margin-top: 10px;
+    cursor: pointer;
 }
 .content{
     text-align: center;
