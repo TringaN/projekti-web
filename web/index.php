@@ -13,10 +13,10 @@
         <ul class="navlist">
         <li><a href="#" class="active">Home</a></li>
         <li><a href="#Process" >About me</a></li>
-        <li><a href="/projekti ubt ne web/service.html">Services</a></li>
-        <li><a href="blog.html">Blog</a></li>
-        <li><a href="/contact.html">Contact Us</a></li>
-        <li><a href="/registers.html">Register</a></li>
+        <li><a href="service.php">Services</a></li>
+        <li><a href="blog.php">Blog</a></li>
+        <li><a href="contact.php">Contact Us</a></li>
+        <li><a href="registers.php">Register</a></li>
         </ul>
     </header>
 
@@ -69,13 +69,13 @@
           <!-- <p>CrossFit workouts can be adapted for various fitness goals, whether it's weight loss, muscle gain, or general fitness. Coaches often work with individuals to tailor workouts to their specific needs. </p> -->
           <div class="Services"> 
             <div class="box">
-              <img src="/projekti ubt ne web/main.css/foto1.jpg" alt="">
+              <img src="main.css/foto1.jpg" alt="">
               <h3>Intensity and Efficiency:</h3>
               <p>CrossFit workouts are typically short and intense, allowing individuals to achieve significant fitness gains in a relatively short amount of time. This can be particularly beneficial for those with busy schedules.</p>
               <a href="">Learn More!</a>
             </div>
             <div class="box">
-              <img src="/projekti ubt ne web/main.css/foto2.jpg" alt="">
+              <img src="main.css/foto2.jpg" alt="">
               <h3>Community and Support:</h3>
               <p> Many CrossFit gyms (boxes) foster a sense of community and support. Group workouts can provide motivation, accountability, and a social aspect to fitness, making it more enjoyable for some individuals.</p>
               <a href="">Learn More!</a>

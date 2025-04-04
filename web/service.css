@@ -10,18 +10,27 @@ body{
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #efefef;
+  background-color: #5187B2;
 }
-section{
-  border: solid 1px black;
+.header-container {
+  text-align: center; /* Qendra e titullit dhe sliderit */
+  margin-bottom: 20px; /* Hapësira poshtë për sliderin */
 }
-header{
-  margin-bottom: 100px;
+.header-title {
+  font-size: 70px; /* Madhësia e titullit */
+  margin: 20px 0 40px ; /* Hiq hapësirën e sipërme dhe të poshtme */
+  padding: 5px 0; /* Shtoni hapësirë brenda titullit */
+  color: #000000c4; /* Ngjyra e titullit */
+  font-weight: bold; /* Pesha e titullit */
+  text-decoration: underline;
 }
-.slide-container{
- max-width: 1120px; 
+
+.slide-container {
+  max-width: 1120px; 
   width: 100%;
-  padding: 40px 0 ;
+  margin: 0 auto; /* Qendra sliderit */
+  padding: 60px 0; /* Shtoni hapësirë rreth sliderit */
+  margin-top: 80px;
 }
 .slide-content{
   margin: 0 40px;
@@ -112,6 +121,7 @@ header{
 background: #265DF2;
 transition: color 0.3s ease;
 } 
+/* 4070f4 */
 .swiper-natBtn:hover{
   color: #4070f4;
 }
@@ -132,6 +142,7 @@ transition: color 0.3s ease;
 .swiper-pagination-bullet-active{
   background-color: #4070f4;
 }
+
 @media screen and(max-width:768px){
   .slide-content{
     margin: 0 10px;

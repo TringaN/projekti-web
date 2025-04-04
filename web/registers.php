@@ -1,10 +1,52 @@
+
+
+<?php
+session_start();
+include 'dbconn.php';
+
+$db = new dbconn();
+$conn = $db->startConnection();
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $username = $_POST['username'];
+    $email    = $_POST['email'];
+    $password = $_POST['password'];
+
+    $check = $conn->prepare("SELECT * FROM users WHERE username = :username OR email = :email");
+    $check->bindParam(':username', $username);
+    $check->bindParam(':email', $email);
+    $check->execute();
+
+    if ($check->rowCount() > 0) {
+        echo "<p style='color:red;'>Username ose Email ekziston tashmë!</p>";
+        exit;
+    }
+
+    $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
+
+    $sql = "INSERT INTO users (username, email, password, role) VALUES (:username, :email, :password, 'user')";
+    $stmt = $conn->prepare($sql);
+    $stmt->bindParam(':username', $username);
+    $stmt->bindParam(':email', $email);
+    $stmt->bindParam(':password', $hashedPassword);
+
+    if ($stmt->execute()) {
+        echo "<p style='color:lightgreen;'>Regjistrimi u krye me sukses! Mund të kyçeni tani.</p>";
+    } else {
+        echo "<p style='color:red;'>Gabim gjatë regjistrimit!</p>";
+    }
+}
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="/index.html">
+    <title>Registers</title>
+    <link rel="stylesheet" href="index.html">
 </head>
 <body>
     <style>
@@ -136,10 +178,10 @@
 <body>
     <div class="wrapper">
         <div class="form-wrapper sign-in">
-            <form action="/connect.php" method="post">
+            <form action="login.php" method="post">
                 <h2>Login</h2>
                 <div class="input-group">
-                    <input type="text" required name="firstName">
+                    <input type="text" required name="username">
                     <label for="">Username</label>
                 </div>
 
@@ -156,7 +198,7 @@
                 </div>
             </form>
         </div>
-        <div class="form-wrapper sign-up">
+        <!-- <div class="form-wrapper sign-up">
             <form action="">
                 <h2>Sign up</h2>
                 <div class="input-group">
@@ -172,15 +214,40 @@
                     <label for="">password</label>
                 </div>
                 <div class="remember">
-                    <label><input type="checkbox">I agree to the terms & conditions </label>
+                    <label><input type="checkbox"> I agree to the terms & conditions </label>
                 </div>
                 <button type="submit">Sign Up</button>
                 <div class="signUp-link">
-                    <p>Already have an account<a href="#" 
+                    <p>Already have an account  <a href="#" 
                         class="signInBtn-link">Sign In</a></p>
                 </div>
             </form>
-        </div>
+        </div> -->
+        <div class="form-wrapper sign-up">
+        <form action="registers.php" method="POST">
+    <h2>Sign up</h2>
+    <div class="input-group">
+        <input type="text" name="username" placeholder="Username"  required>
+        <label>Username</label>
+    </div>
+    <div class="input-group">
+        <input type="email" name="email"  placeholder="email"  required>
+        <label>Email</label>
+    </div>
+    <div class="input-group">
+        <input type="password" name="password"  placeholder="Password" required>
+        <label>Password</label>
+    </div>
+    <div class="remember">
+        <label><input type="checkbox"> I agree to the terms & conditions </label>
+    </div>
+    <button type="submit">Sign Up</button>
+    <div class="signUp-link">
+        <p>Already have an account <a href="#" class="signInBtn-link">Sign In</a></p>
+    </div>
+</form>
+    </div>
+
     </div>
     <script>
         const signInBtnLink = document.querySelector('.signInBtn-link');

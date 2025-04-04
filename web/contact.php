@@ -1,18 +1,47 @@
+<?php
+include 'dbconn.php';
+
+$db = new dbconn();
+$conn = $db->startConnection();
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $name    = $_POST['name'] ?? '';
+    $email   = $_POST['email'] ?? '';
+    $message = $_POST['message'] ?? '';
+
+    // Validim i thjeshtë
+    if (!empty($name) && !empty($email) && !empty($message)) {
+        $sql = "INSERT INTO contact_messages (name, email, message) VALUES (:name, :email, :message)";
+        $stmt = $conn->prepare($sql);
+        $stmt->bindParam(':name', $name);
+        $stmt->bindParam(':email', $email);
+        $stmt->bindParam(':message', $message);
+
+        if ($stmt->execute()) {
+            echo "<p style='color: lightgreen; text-align:center;'>Mesazhi u dërgua me sukses!</p>";
+        } else {
+            echo "<p style='color: red; text-align:center;'>Gabim gjatë dërgimit të mesazhit.</p>";
+        }
+    } else {
+        echo "<p style='color: red; text-align:center;'>Ju lutem plotësoni të gjitha fushat.</p>";
+    }
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us</title>
-    <link rel="stylesheet" href="/index.css">
-    <link rel="stylesheet" href="/index.html">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="index.html">
 </head>
 <body>
     <div class="container">
         <div class="left-column">
             <div class="Contact">
                 <h2 style="color: #fff;">Get in Touch</h2>
-                <form>
+                <form action ="contact.php" method = "POST">
                     <label for="name" style="color: #fff;">Your Name:</label>
                     <input type="text" name="name" required>
                     <label for="email" style="color: #fff;">Your Email:</label>
