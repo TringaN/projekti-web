@@ -95,7 +95,7 @@ $coaches = $stmt->fetchAll(PDO::FETCH_ASSOC);
 }
 
 .edit-btn {
-    background: orange;
+    background:orange;
     color: white;
     padding: 5px 10px;
     border-radius: 4px;
@@ -126,10 +126,10 @@ $coaches = $stmt->fetchAll(PDO::FETCH_ASSOC);
     <table>
         <tr>
             <th>Emri</th>
-            <th>Specialiteti</th>
             <th>Përshkrimi</th>
             <th>Foto</th>
-            <th>Veprime</th>
+            <th></th>
+            
         </tr>
         <?php foreach ($coaches as $coach): ?>
         <tr>
@@ -143,7 +143,7 @@ $coaches = $stmt->fetchAll(PDO::FETCH_ASSOC);
                 <?php endif; ?>
             </td>
             <td class="action-buttons">
-   <a href="edit_coach.php?id=<?= $coach['id'] ?>" class="button edit-btn">Edito</a>
+   <a href="edit_coach.php?id=<?= $coach['id'] ?>" class=" edit-btn">Edito</a>
    <a href="?delete=<?= $coach['id'] ?>" class="button delete-btn" onclick="return confirm('A je i sigurt që dëshiron ta fshish këtë trajner?')">Fshij</a>
 </td>
 

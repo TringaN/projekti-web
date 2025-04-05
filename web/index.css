@@ -84,17 +84,117 @@ button{
 .content h2{
     margin-top: 20px;
 }
-@media screen  and (max-width:768px){
-    .container{
-        display: flex;
-        flex-direction:column;
+@media only screen and (max-width: 768px) {
+        header {
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 20px;
+            height: auto;
+        }
+        #menu-icon {
+            display: block;
+            position: absolute;
+            right: 25px;
+            top: 20px;
+        }
+        .navlist {
+            flex-direction: column;
+            width: 100%;
+            background: white;
+            display: none;
+            padding: 10px 0;
+        }
+        .navlist.show {
+            display: flex;
+        }
+        .navlist a {
+            color: black;
+            font-size: 18px;
+            margin: 10px 20px;
+        }
+    }
+    .navlist.active {
+        left: 0;
+    }
+
+    .container {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    #Wallpaper {
+        width: 100%;
+        height: auto;
+    }
+
+    .login-form {
+        width: 100%;
+    }
+
+    .Process h1 {
+        font-size: 40px;
+        text-align: center;
+        padding: 20px 0;
+    }
+
+    .Services {
+        flex-direction: column;
         align-items: center;
     }
-    .left-column{
-        width: 85%;
+
+    .box {
+        width: 90%;
+        margin-bottom: 20px;
     }
-    .right-column{
-        width: 85%;
-        margin-top: 25px;
+
+    .testimonials {
+        padding: 20px;
+        height: auto;
+        text-align: center;
+    }
+
+    .comment {
+        font-size: 24px;
+        width: 90%;
+    }
+
+    .text h1 {
+        font-size: 40px;
+        text-align: center;
+    }
+
+    .lifestyle {
+        background-position: center;
+        height: auto;
+        padding: 20px;
+    }
+
+    .footerall {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .footer-menu, .map {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .footer-menu {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .box-2 {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .footerNav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footerNav ul li {
+        margin: 10px 0;
     }
 }

@@ -18,6 +18,8 @@
         <li><a href="contact.php">Contact Us</a></li>
         <li><a href="registers.php">Register</a></li>
         </ul>
+        <div id="menu-icon" class="fas fa-bars"></div>
+
     </header>
 
     <!-- <div class="menu" id="menu-ic">
@@ -116,7 +118,7 @@
           <h1>Come & Train With Us</h1> <br>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, pariatur.</p> <br>
           <div class="buttons">
-          <a href="/registers.html" class="btn2">JOIN NOW</a>
+          <a href="registers.php" class="btn2">JOIN NOW</a>
         </div>
         </div>
       </section>
